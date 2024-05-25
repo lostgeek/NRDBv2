@@ -4,6 +4,7 @@ import { service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 import BsForm from 'ember-bootstrap/components/bs-form';
 import PowerSelect from 'ember-power-select/components/power-select';
+import BasicSearchInput from './basic-search-input';
 
 export default class SearchFormComponent extends Component {
   @service router;
@@ -79,6 +80,8 @@ export default class SearchFormComponent extends Component {
       @onSubmit={{this.doSearch}}
       as |form|
     >
+      <BasicSearchInput />
+
       <fieldset>
         <div class='row'>
           <div class='col-sm-12'>
